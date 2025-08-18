@@ -22,6 +22,13 @@ This version improves computational efficiency, accuracy, and usability over pre
 - High-performance computation for large datasets  
 
 ---
+## Requirements
+
+- Python 3.x
+- gfortran (Fortran compiler)
+- Python packages (install via pip):
+  ```bash
+  pip install -r requirements.txt
 
 ## Installation
 
