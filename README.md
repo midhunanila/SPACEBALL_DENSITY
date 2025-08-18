@@ -1,4 +1,5 @@
-# SPACEBALL v. 3.0
+# SPACEBALL-v3.0
+
 
 **Density Calculation of Protein Nanodroplets Using SPACEBALL**
 
