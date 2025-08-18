@@ -35,10 +35,11 @@ This version improves computational efficiency, accuracy, and usability over pre
   brew install python
 
 - **gfortran (Fortran compiler)** 
-  # Ubuntu/Debian
-  sudo apt install gfortran
 
-  # macOS (Homebrew)
+  #Ubuntu/Debian
+  sudo apt install gfortran
+  
+  #macOS (Homebrew)
   brew install gcc  # includes gfortran
 
 ## Installation
