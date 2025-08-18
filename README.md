@@ -22,13 +22,24 @@ This version improves computational efficiency, accuracy, and usability over pre
 - High-performance computation for large datasets  
 
 ---
+
 ## Requirements
 
-- Python 3.x
-- gfortran (Fortran compiler)
-- Python packages (install via pip):
+- **Python 3.x**  
+  Install Python 3 from [python.org](https://www.python.org/) or via package manager:
   ```bash
-  pip install -r requirements.txt
+  # Ubuntu/Debian
+  sudo apt install python3 python3-pip
+
+  # macOS
+  brew install python
+
+- **gfortran (Fortran compiler)** 
+  # Ubuntu/Debian
+  sudo apt install gfortran
+
+  # macOS (Homebrew)
+  brew install gcc  # includes gfortran
 
 ## Installation
 
