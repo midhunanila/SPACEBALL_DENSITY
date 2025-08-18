@@ -20,9 +20,6 @@ This version improves computational efficiency, accuracy, and usability over pre
 - Density calculations for protein nanodroplets  
 - Supports multiple simulation file formats (XYZ, PDB, etc.)  
 - High-performance computation for large datasets  
-- Command-line interface  
-- Visual outputs (plots and heatmaps)  
-- Cross-platform compatibility  
 
 ---
 
