@@ -34,12 +34,12 @@ This version improves computational efficiency, accuracy, and usability over pre
   # macOS
   brew install python
 
-- **gfortran (Fortran compiler)** 
-
-  #Ubuntu/Debian
+- **gfortran (Fortran compiler)**
+  ```bash
+  # Ubuntu/Debian
   sudo apt install gfortran
   
-  #macOS (Homebrew)
+  # macOS (Homebrew)
   brew install gcc  # includes gfortran
 
 ## Installation
@@ -47,5 +47,5 @@ This version improves computational efficiency, accuracy, and usability over pre
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/SPACEBALL-v3.0.git
+git clone https://github.com/midhunanila/SPACEBALL-v3.0.git
 cd SPACEBALL-v3.0
