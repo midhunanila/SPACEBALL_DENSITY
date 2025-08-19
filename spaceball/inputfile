@@ -1,0 +1,11 @@
+pdb_structure: filexx.pdb
+wall_probe_radius_[A]: 1.42
+water_probe_radius_[A]: 1.42
+grid_X_[A]: 0.8
+grid_Y_[A]: 0.8
+grid_Z_[A]: 0.8
+number_of_clusters_written_to_the_output: 5
+machine_[1_PC/2_CLUSTER]: 2
+number_of_rotations: 5
+EOF
+
