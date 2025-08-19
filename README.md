@@ -33,13 +33,105 @@
   # macOS (Homebrew)
   brew install gcc  # includes gfortran
 
-## Installation
 
+## Installation
 
 Clone the repository:
 
 ```bash
 git clone https://github.com/midhunanila/SPACEBALL-v3.0.git
-cd SPACEBALL-v3.0
+cd SPACEBALL-v3.0/spaceball
+```
 
-Then follow the instructions in readme.txt file
+Compile the Spaceball executable:
+
+```bash
+make
+```
+
+This will create the executable file named `prot_hole_paral3.xg` for SPACEBALL calculations.
+
+---
+
+## Calculation
+
+### Probe Radius
+
+The Python scripts in this repository calculate the optimal probe radius for a protein nanodroplet. The input file should be in standard PDB format.
+
+---
+
+## Steps to Run
+
+### 1. Generate Probe Radius with `probe.py`
+
+1. Navigate to the `scripts` folder:
+
+```bash
+cd ../scripts
+```
+
+2. Run the script:
+
+```bash
+python spaceball.py protein.pdb --chain_size 140 --surface_fractions 0.5
+```
+
+- `--chain_size`: Set according to your protein  
+- `--surface_fractions`: Fraction of the surface (default: 0.5)  
+
+This script sets the probe radius and generates the input file for SPACEBALL.
+
+---
+
+### 2. Run SPACEBALL Calculation
+
+1. Navigate to the `spaceball` folder if not already there:
+
+```bash
+cd ../spaceball
+```
+
+2. Run the executable:
+
+```bash
+./prot_hole_paral3.xg inputfile
+```
+
+- Use the probe radius from `probe.py` in the input file.  
+- Output will be saved as:
+
+```bash
+pdbfilename.out
+```
+
+*(replace `pdbfilename` with your PDB file name).*
+
+---
+
+### Example Workflow
+
+```bash
+# Generate probe radius
+cd scripts
+python spaceball.py protein.pdb --chain_size 140 --surface_fractions 0.5
+
+# Compile Spaceball
+cd ../spaceball
+make
+
+# Run SPACEBALL calculation
+./prot_hole_paral3.xg inputfile
+
+# Check output
+ls -l pdbfilename.out
+```
+
+---
+
+## Notes
+
+- Ensure Python and a Fortran compiler are installed.  
+- Adjust `chain_size` according to your protein.  
+- Verify `inputfile` contains the correct probe radius values.  
+- Paths are relative; adjust if your folder structure differs.
