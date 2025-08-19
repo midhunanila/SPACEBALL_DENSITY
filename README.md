@@ -74,7 +74,7 @@ cd ../scripts
 2. Run the script:
 
 ```bash
-python spaceball.py ${INPUT_PDB_FILE} --chain_size ${CHAIN_SIZE} --surface_fractions ${SURFACE_FRACTION}
+python spaceball.py <pdb_file> --chain_size <chainsize> --surface_fractions <surface_fraction>
 ```
 
 - `--chain_size`: Set according to your protein  
@@ -108,6 +108,13 @@ pdbfilename.out
 *(replace `pdbfilename` with your PDB file name).*
 
 ---
+### 3. density calculation
+
+```bash
+cd scripts
+python density_calc.py <pdb_file> <out_file>
+```
+The result gives the density of droplet  in units of **res/nm³**
 
 ### Example Workflow
 
@@ -125,6 +132,8 @@ make
 
 # Check output
 ls -l pdbfilename.out
+# Density calculation
+python density_calc.py droplet.pdb pdbfilename.out
 ```
 
 ---
