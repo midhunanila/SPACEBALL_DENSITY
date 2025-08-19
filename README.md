@@ -74,7 +74,7 @@ cd ../scripts
 2. Run the script:
 
 ```bash
-python spaceball.py protein.pdb --chain_size 140 --surface_fractions 0.5
+python spaceball.py protein.pdb --chain_size ${CHAIN_SIZE} --surface_fractions ${SURFACE_FRACTION}
 ```
 
 - `--chain_size`: Set according to your protein  
