@@ -74,7 +74,7 @@ cd ../scripts
 2. Run the script:
 
 ```bash
-python spaceball.py protein.pdb --chain_size ${CHAIN_SIZE} --surface_fractions ${SURFACE_FRACTION}
+python spaceball.py ${INPUT_PDB_FILE} --chain_size ${CHAIN_SIZE} --surface_fractions ${SURFACE_FRACTION}
 ```
 
 - `--chain_size`: Set according to your protein  
@@ -114,7 +114,7 @@ pdbfilename.out
 ```bash
 # Generate probe radius
 cd scripts
-python spaceball.py protein.pdb --chain_size ${CHAIN_SIZE} --surface_fractions ${SURFACE_FRACTION}
+python spaceball.py droplet.pdb --chain_size 140 --surface_fractions 0.5
 
 # Compile Spaceball
 cd ../spaceball
