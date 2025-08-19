@@ -9,7 +9,7 @@
 
 ## Overview
 
-**SPACEBALL v. 3.0** is a computational tool for **density calculation of protein nanodroplets**.  It analyzes PDB structures and computes the nanodroplet volume.  The previous version of [SPACEBALL](http://info.ifpan.edu.pl/~chwastyk/spaceball/) was primarily designed for cavity detection.  In this release, we introduce a new method to determine the **optimal probe radius**, enabling more accurate density estimation of protein nanodroplets. 
+**SPACEBALL v. 3.0** is a computational tool for **density calculation of protein nanodroplets**.  It analyzes PDB structures and computes the nanodroplet volume.  The previous version of [SPACEBALL v. 2.0](http://info.ifpan.edu.pl/~chwastyk/spaceball/) was primarily designed for cavity detection.  In this release, we introduce a new method to determine the **optimal probe radius**, enabling more accurate density estimation of protein nanodroplets. 
 
 ---
 
