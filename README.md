@@ -13,13 +13,6 @@
 
 ---
 
-## Features
-
-- Density calculations for protein nanodroplets  
-- Supports multiple simulation file formats (XYZ, PDB, etc.)  
-- High-performance computation for large datasets  
-
----
 
 ## Requirements
 
@@ -42,8 +35,11 @@
 
 ## Installation
 
+
 Clone the repository:
 
 ```bash
 git clone https://github.com/midhunanila/SPACEBALL-v3.0.git
 cd SPACEBALL-v3.0
+
+Then follow the instructions in readme.txt file
