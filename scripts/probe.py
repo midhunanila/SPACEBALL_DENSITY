@@ -1,6 +1,7 @@
 import os
 import math
 import argparse
+
 def parse_pdb(file_path):
     """Extract atom coordinates from a PDB file."""
     atoms = []
@@ -43,9 +44,23 @@ def calculate_distance(point1, point2):
     """Euclidean distance between two 3D points."""
     return math.dist(point1, point2)
 
+def write_output_file(pdb_file, probe_radius, output_file="inputfile"):
+    """Write results into formatted output file."""
+    with open(output_file, "w") as f:
+        f.write(f"pdb_structure: {os.path.basename(pdb_file)}\n")
+        f.write(f"wall_probe_radius_[A]: {probe_radius:.2f}\n")
+        f.write(f"water_probe_radius_[A]: 1.42\n")
+        f.write(f"grid_X_[A]: 3\n")
+        f.write(f"grid_Y_[A]: 3\n")
+        f.write(f"grid_Z_[A]: 3\n")
+        f.write(f"number_of_clusters_written_to_the_output: 1\n")
+        f.write(f"machine_[1_PC/2_CLUSTER]: 4\n")
+        f.write(f"number_of_rotations: 1\n")
+        f.write("EOF\n")
+
+    print(f"\nResults written to {output_file}")
 
 # ------------------------- MAIN ANALYSIS -------------------------
-
 
 def main():
     parser = argparse.ArgumentParser(description="SPACEBALL v3.0 – Surface chain analysis")
@@ -53,6 +68,7 @@ def main():
     parser.add_argument("--chain_size", type=int, required=True, help="Number of atoms per chain")
     parser.add_argument("--surface_fractions", type=float, nargs="+", default=[0.5],
                         help="Surface fractions to analyze (e.g. 0.2 0.4 0.5)")
+    parser.add_argument("--output", type=str, default="inputfile", help="Output file name")
 
     args = parser.parse_args()
 
@@ -74,6 +90,8 @@ def main():
 
     # Sort chains by distance to COM (descending → surface chains first)
     sorted_chains = sorted(chain_distances.items(), key=lambda x: x[1], reverse=True)
+
+    final_probe_radius = None
 
     for frac in args.surface_fractions:
         N = max(1, int(total_chains * frac))
@@ -103,10 +121,14 @@ def main():
         # Output result
         if min_distances:
             avg_min_dist = sum(min_distances) / len(min_distances)
+            final_probe_radius = avg_min_dist
             print(f"  Probe_radius = {avg_min_dist:.2f} Å")
         else:
             print("  No valid distances computed.")
 
+    # Write to file if computed
+    if final_probe_radius is not None:
+        write_output_file(args.pdb_file, final_probe_radius, args.output)
 
 if __name__ == "__main__":
     main()
