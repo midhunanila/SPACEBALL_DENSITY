@@ -26,7 +26,7 @@ SPACEBALL-v3.0/
 │
 ├── scripts/                # Python helper scripts
 │   ├── probe.py        # Calculates optimal probe radius & prepares input file for SPACEBALL calculation
-│   ├── density_calc.py     # Computes density from PDB + SPACEBALL output file
+│   ├── density.py     # Computes density from PDB + SPACEBALL output file
 │   └── (other utilities if added)
 │
 └── simulation_clusters               # Example PDB input file
@@ -98,7 +98,7 @@ cd ../scripts
 2. Run the script:
 
 ```bash
-python spaceball.py <pdb_file> --chain_size <chainsize> --surface_fractions <surface_fraction>
+python probe.py <pdb_file> --chain_size <chainsize> --surface_fractions <surface_fraction>
 ```
 
 - `--chain_size`: Set according to your protein  
@@ -178,7 +178,7 @@ cd ../scripts
 2. Run the script:
    
 ```bash
-python density_calc.py <pdb_file> <out_file>
+python density.py <pdb_file> <out_file>
 ```
 The result gives the density of the droplet  in units of **res/nm³**
 
