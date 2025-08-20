@@ -47,7 +47,7 @@ SPACEBALL-v3.0/
 Clone the repository:
 
 ```bash
-git clone https://github.com/midhunanila/SPACEBALL-v3.0.git
+git clone https://github.com/midhunanila/SPACEBALL_DENSITY.git
 ```
 
 
