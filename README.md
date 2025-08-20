@@ -110,11 +110,18 @@ pdbfilename.out
 ---
 ### 3. density calculation
 
+1. Navigate to the `spaceball` folder if not already there:
+
 ```bash
-cd scripts
+cd ../scripts
+```
+
+2. Run the script:
+   
+```bash
 python density_calc.py <pdb_file> <out_file>
 ```
-The result gives the density of droplet  in units of **res/nm³**
+The result gives the density of the droplet  in units of **res/nm³**
 
 ### Example Workflow
 
