@@ -101,9 +101,44 @@ python spaceball.py <pdb_file> --chain_size <chainsize> --surface_fractions <sur
 
 This script sets the probe radius and generates the input file for SPACEBALL.
 
+### 2. Input File Description
+
+The input file specifies parameters for a molecular simulation or droplet/solvent analysis. Each line corresponds to a key parameter:
+
+- **`pdb_structure: big_1.pdb`**  
+  The input structure file in PDB format containing the 3D coordinates of all atoms in the system.
+
+- **`wall_probe_radius_[A]: 43.72`**  
+  Radius of the wall probe in **Ångströms**. Defines the outer boundary or cavity for probe calculations.
+
+- **`water_probe_radius_[A]: 1.42`**  
+  Radius of the water probe in **Ångströms**. Represents the effective size of a water molecule when probing the structure.
+
+- **`grid_X_[A]: 3`**  
+  Grid spacing along the X-axis in **Ångströms**. Determines the resolution of the computational grid.
+
+- **`grid_Y_[A]: 3`**  
+  Grid spacing along the Y-axis in **Ångströms**.
+
+- **`grid_Z_[A]: 3`**  
+  Grid spacing along the Z-axis in **Ångströms**.
+
+- **`number_of_clusters_written_to_the_output: 1`**  
+  Number of clusters to save in the output file. Only the largest or first cluster will be written.
+
+- **`machine_[1_PC/2_CLUSTER]: 4`**  
+  Machine configuration or identifier. Could indicate parallelization (1 = single PC, 2 = cluster). Here, `4` may specify number of cores or threads.
+
+- **`number_of_rotations: 1`**  
+  Number of rotational orientations applied to the probe during the calculation.
+
+- **`EOF`**  
+  End-of-file marker indicating the input file ends here.
+
+
 ---
 
-### 2. Run SPACEBALL Calculation
+### 3. Run SPACEBALL Calculation
 
 1. Navigate to the `spaceball` folder if not already there:
 
@@ -127,7 +162,7 @@ pdbfilename.out
 *(replace `pdbfilename` with your PDB file name).*
 
 ---
-### 3. density calculation
+### 4. density calculation
 
 1. Navigate to the `spaceball` folder if not already there:
 
@@ -142,7 +177,7 @@ python density_calc.py <pdb_file> <out_file>
 ```
 The result gives the density of the droplet  in units of **res/nm³**
 
-### Example Workflow
+### 5. Example Workflow
 
 ```bash
 # Generate probe radius
