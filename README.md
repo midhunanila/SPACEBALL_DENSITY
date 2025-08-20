@@ -103,19 +103,19 @@ This script sets the probe radius and generates the input file for SPACEBALL.
 
 ### 2. Input File Description
 
-The input file specifies parameters for a molecular simulation or droplet/solvent analysis. Each line corresponds to a key parameter:
+The input file specifies parameters for running SPACEBALL. Each line corresponds to a key parameter:
 
-- **`pdb_structure: big_1.pdb`**  
+- **`pdb_structure: <pdb_file>`**  
   The input structure file in PDB format containing the 3D coordinates of all atoms in the system.
 
-- **`wall_probe_radius_[A]: 43.72`**  
-  Radius of the wall probe in **Ångströms**. Defines the outer boundary or cavity for probe calculations.
+- **`wall_probe_radius_[A]: proberadius `**  
+  Radius of the wall probe in **Ångströms**. Defines the outer boundary for SPACEBALL calculations.
 
 - **`water_probe_radius_[A]: 1.42`**  
-  Radius of the water probe in **Ångströms**. Represents the effective size of a water molecule when probing the structure.
+  Radius of the water probe in **Ångströms**. Represents the effective size of a water molecule when probing the structure. The default value is 1.42 **Ångströms**
 
 - **`grid_X_[A]: 3`**  
-  Grid spacing along the X-axis in **Ångströms**. Determines the resolution of the computational grid.
+  Grid spacing along the X-axis in **Ångströms**. Determines the resolution of the computational grid. The default value of the lattice constant, a = 3 **Ångströms**, corresponds roughly to the water molecule diameter
 
 - **`grid_Y_[A]: 3`**  
   Grid spacing along the Y-axis in **Ångströms**.
