@@ -7,7 +7,7 @@
 
 ## Overview
 
-**SPACEBALL** is a computational tool for **density calculation of protein nanodroplets**.  It analyzes PDB structures and computes the nanodroplet volume.  The previous version of [SPACEBALL v. 2.0](http://info.ifpan.edu.pl/~chwastyk/spaceball/) was primarily designed for cavity detection.  In this release, we introduce a new method to determine the **optimal probe radius**, enabling more accurate density estimation of protein nanodroplets. 
+**SPACEBALL** is a computational tool designed for the **density calculation of protein nanodroplets**. It analyzes PDB structures to compute the nanodroplet volume, which can then be used to estimate density accurately. The previous version [SPACEBALL v. 2.0](http://info.ifpan.edu.pl/~chwastyk/spaceball/) was primarily focused on calculating the volume of cavities within proteins.  In this release, we introduce a **new method to determine the optimal probe radius**, enabling more precise density estimation of protein nanodroplets. By using this optimized probe radius, researchers can obtain **more reliable volume measurements**,  supporting studies in **biophysics, phase separation, and protein nanostructure analysis**.
 
 ## Repository structure
 
@@ -20,8 +20,6 @@ SPACEBALL-v3.0/
 │
 ├── scripts/                # Python helper scripts
 │   ├── probe.py        # Calculates optimal probe radius & prepares input file for SPACEBALL calculation
-│   ├── density.py     # Computes density from PDB + SPACEBALL output file
-│   └── (other utilities if added)
 │
 └── simulation_clusters               # Example PDB input file
             
@@ -42,16 +40,7 @@ SPACEBALL-v3.0/
   pip install math
   pip install argparse
 
-
-- **gfortran (Fortran compiler)**
-  ```bash
-  # Ubuntu/Debian
-  sudo apt install gfortran
-  
-  # macOS (Homebrew)
-  brew install gcc  # includes gfortran
-  ```
----            
+       
 
 ## Installation
 
@@ -59,18 +48,8 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/midhunanila/SPACEBALL-v3.0.git
-cd SPACEBALL-v3.0/spaceball
 ```
 
-Compile the Spaceball executable:
-
-```bash
-make
-```
-
-This will create the executable file named `prot_hole_paral3.xg` for SPACEBALL calculations.
-
----
 
 ## Calculation
 
@@ -82,7 +61,7 @@ The Python scripts in this repository calculate the optimal probe radius for a p
 
 ## Steps to Run
 
-### 1. Generate Probe Radius with `probe.py`
+### 1. calculation of Optimal Probe Radius with `probe.py`
 
 1. Navigate to the `scripts` folder:
 
@@ -99,20 +78,19 @@ python probe.py <pdb_file> --chain_size <chainsize> --surface_fractions <surface
 - `--chain_size`: Set according to your protein  
 - `--surface_fractions`: Fraction of the surface (default: 0.5)  
 
-This script sets the probe radius and generates the input file for SPACEBALL.
+This script gives the corresponding value of optimal probe radius in **Ångströms**
 
-### 2. Input File Description
+Use this value on the Spaceball [website](http://info.ifpan.edu.pl/~chwastyk/spaceball/)
 
-The input file specifies parameters for running SPACEBALL. Each line corresponds to a key parameter:
+### 2. Input parameter Description
+
+The input parameters for the SPACEBALL calculation. Each line corresponds to a key parameter:
 
 - **`pdb_structure: <pdb_file>`**  
-  The input structure file in PDB format containing the 3D coordinates of all atoms in the system.
+  The input structure file in PDB format contains the 3D coordinates of all atoms in the system.
 
 - **`wall_probe_radius_[A]: proberadius `**  
   Radius of the wall probe in **Ångströms**. Defines the outer boundary for SPACEBALL calculations.
-
-- **`water_probe_radius_[A]: 1.42`**  
-  Radius of the water probe in **Ångströms**. Represents the effective size of a water molecule when probing the structure. The default value is 1.42 **Ångströms**
 
 - **`grid_X_[A]: 3`**  
   Grid spacing along the X-axis in **Ångströms**. Determines the resolution of the computational grid. The default value of the lattice constant, a = 3 **Ångströms**, corresponds roughly to the water molecule diameter
@@ -123,60 +101,16 @@ The input file specifies parameters for running SPACEBALL. Each line corresponds
 - **`grid_Z_[A]: 3`**  
   Grid spacing along the Z-axis in **Ångströms**.
 
-- **`number_of_clusters_written_to_the_output: 1`**  
-  Number of clusters to save in the output file. Only the largest or first cluster will be written.
-
-- **`machine_[1_PC/2_CLUSTER]: 4`**  
-  Machine configuration or identifier. Could indicate parallelization (1 = single PC, 2 = cluster). Here, `4` may specify number of cores or threads.
 
 - **`number_of_rotations: 1`**  
   Number of rotational orientations applied to the probe during the calculation.
 
-- **`EOF`**  
-  End-of-file marker indicating the input file ends here.
-
-
----
-
-### 3. Run SPACEBALL Calculation
-
-1. Navigate to the `spaceball` folder if not already there:
-
-```bash
-cd ../spaceball
-```
-
-2. Run the executable:
-
-```bash
-./prot_hole_paral3.xg inputfile
-```
-
-- Use the probe radius from `probe.py` in the input file.  
-- Output will be saved as:
-
-```bash
-pdbfilename.out
-```
-
-*(replace `pdbfilename` with your PDB file name).*
 
 ---
 
 ### 4. density calculation
 
-1. Navigate to the `spaceball` folder if not already there:
-
-```bash
-cd ../scripts
-```
-
-2. Run the script:
-   
-```bash
-python density.py <pdb_file> <out_file>
-```
-The result gives the density of the droplet  in units of **res/nm³**
+From the volume obtained from the given platform, we can compute the density of the protein nanodroplet
 
 ---
 
@@ -186,25 +120,33 @@ The result gives the density of the droplet  in units of **res/nm³**
 # Generate probe radius
 cd scripts
 python spaceball.py droplet.pdb --chain_size 140 --surface_fractions 0.5
-
-# Compile Spaceball
-cd ../spaceball
-make
-
-# Run SPACEBALL calculation
-./prot_hole_paral3.xg inputfile
-
-# Check output
-ls -l pdbfilename.out
-# Density calculation
-python density_calc.py droplet.pdb pdbfilename.out
 ```
 
 ---
 
 ## Notes
 
-- Ensure Python and a Fortran compiler are installed.  
+- Ensure Python and its necessary packages are installed.
+-  The input PDB file must be in standard PDB format.
 - Adjust `chain_size` according to your protein.  
-- Verify `inputfile` contains the correct value of parameters.  
+- Verify the parameters given on the website are correct.  
 - Paths are relative; adjust if your folder structure differs.
+
+## Developers
+
+| Name                  | Role / Contribution                  |
+|-----------------------|---------------------------------------|
+| Midhun Mohan Anila    | Python Scripts and Algorithm Design   |
+| Bartosz Rozycki       | Algorithm Design, corrections and validation |
+| Michał Wojciechowski  | corrections and validation             |
+| Mateusz Chwastyk      | Developed the SPACEBALL website and method |
+
+## Publication (Under Review)
+
+Our methodology and the SPACEBALL tool are described in a recent manuscript currently **under review**:
+
+- **Title:** Theoretical Methods for Assessing the Density of Protein Nanodroplets 
+- **Authors:** Midhun Mohan Anila, Michał Wojciechowski, Mateusz Chwastyk, Bartosz Rozycki  
+- **Status:** Under Review  
+
+
