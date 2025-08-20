@@ -119,7 +119,7 @@ From the volume obtained from the given platform, we can compute the density of 
 ```bash
 # Generate probe radius
 cd scripts
-python spaceball.py droplet.pdb --chain_size 140 --surface_fractions 0.5
+python probe.py droplet.pdb --chain_size 140 --surface_fractions 0.5
 ```
 
 ---
