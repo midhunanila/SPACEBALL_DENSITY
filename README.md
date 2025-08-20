@@ -56,7 +56,8 @@ SPACEBALL-v3.0/
   
   # macOS (Homebrew)
   brew install gcc  # includes gfortran
-
+  ```
+---            
 
 ## Installation
 
@@ -167,6 +168,7 @@ pdbfilename.out
 *(replace `pdbfilename` with your PDB file name).*
 
 ---
+
 ### 4. density calculation
 
 1. Navigate to the `spaceball` folder if not already there:
@@ -181,6 +183,8 @@ cd ../scripts
 python density.py <pdb_file> <out_file>
 ```
 The result gives the density of the droplet  in units of **res/nm³**
+
+---
 
 ### 5. Example Workflow
 
@@ -208,5 +212,5 @@ python density_calc.py droplet.pdb pdbfilename.out
 
 - Ensure Python and a Fortran compiler are installed.  
 - Adjust `chain_size` according to your protein.  
-- Verify `inputfile` contains the correct probe radius values.  
+- Verify `inputfile` contains the correct value of parameters.  
 - Paths are relative; adjust if your folder structure differs.
