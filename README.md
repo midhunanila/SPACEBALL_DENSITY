@@ -1,7 +1,5 @@
-# SPACEBALL v.3.0
+# Density Calculation of Protein Nanodroplets Using SPACEBAL
 
-
-**Density Calculation of Protein Nanodroplets Using SPACEBALL**
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
