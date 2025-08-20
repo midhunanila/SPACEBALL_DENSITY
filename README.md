@@ -129,7 +129,7 @@ python spaceball.py droplet.pdb --chain_size 140 --surface_fractions 0.5
 - Ensure Python and its necessary packages are installed.
 -  The input PDB file must be in standard PDB format.
 - Adjust `chain_size` according to your protein.  
-- Verify the parameters given on the website are correct.  
+- Verify the parameters for the SPACEBALL calculation are correct.  
 - Paths are relative; adjust if your folder structure differs.
 
 ## Developers
