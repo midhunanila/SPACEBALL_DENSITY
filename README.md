@@ -1,4 +1,4 @@
-# Density Calculation of Protein Nanodroplets Using SPACEBAL
+# Density Calculation of Protein Nanodroplets Using SPACEBALL
 
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -7,7 +7,7 @@
 
 ## Overview
 
-**SPACEBALL v. 3.0** is a computational tool for **density calculation of protein nanodroplets**.  It analyzes PDB structures and computes the nanodroplet volume.  The previous version of [SPACEBALL v. 2.0](http://info.ifpan.edu.pl/~chwastyk/spaceball/) was primarily designed for cavity detection.  In this release, we introduce a new method to determine the **optimal probe radius**, enabling more accurate density estimation of protein nanodroplets. 
+**SPACEBALL** is a computational tool for **density calculation of protein nanodroplets**.  It analyzes PDB structures and computes the nanodroplet volume.  The previous version of [SPACEBALL v. 2.0](http://info.ifpan.edu.pl/~chwastyk/spaceball/) was primarily designed for cavity detection.  In this release, we introduce a new method to determine the **optimal probe radius**, enabling more accurate density estimation of protein nanodroplets. 
 
 ## Repository structure
 
@@ -17,10 +17,6 @@ SPACEBALL-v3.0/
 ├── LICENSE                 # License file (MIT)
 ├── README.md               # Documentation and usage guide
 │
-├── spaceball/              # Fortran source code and executable
-│   ├── Makefile            # Run `make` here to compile
-│   ├── *.f / *.f90         # Fortran source files
-│   └── prot_hole_paral3.xg # Compiled executable (created after `make`)
 │
 ├── scripts/                # Python helper scripts
 │   ├── probe.py        # Calculates optimal probe radius & prepares input file for SPACEBALL calculation
