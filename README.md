@@ -25,7 +25,7 @@ SPACEBALL-v3.0/
 │   └── prot_hole_paral3.xg # Compiled executable (created after `make`)
 │
 ├── scripts/                # Python helper scripts
-│   ├── probe.py        # Calculates optimal probe radius & prepares input
+│   ├── probe.py        # Calculates optimal probe radius & prepares input file for SPACEBALL calculation
 │   ├── density_calc.py     # Computes density from PDB + SPACEBALL output file
 │   └── (other utilities if added)
 │
