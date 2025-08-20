@@ -44,6 +44,11 @@ SPACEBALL-v3.0/
   # macOS
   brew install python
 
+  # Install required packages using pip
+  pip install math
+  pip install argparse
+
+
 - **gfortran (Fortran compiler)**
   ```bash
   # Ubuntu/Debian
