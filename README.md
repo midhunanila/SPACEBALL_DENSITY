@@ -139,7 +139,7 @@ python spaceball.py droplet.pdb --chain_size 140 --surface_fractions 0.5
 | Midhun Mohan Anila    | Python Scripts and Algorithm Design   |
 | Bartosz Rozycki       | Algorithm Design, corrections and validation |
 | Michał Wojciechowski  | corrections and validation             |
-| Mateusz Chwastyk      | Developed the SPACEBALL website and method |
+| Mateusz Chwastyk      | Developed the SPACEBALL method and website |
 
 ## Publication (Under Review)
 
