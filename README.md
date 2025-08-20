@@ -61,7 +61,7 @@ The Python scripts in this repository calculate the optimal probe radius for a p
 
 ## Steps to Run
 
-### 1. calculation of Optimal Probe Radius with `probe.py`
+### 1. calculation of optimal probe radius with `probe.py`
 
 1. Navigate to the `scripts` folder:
 
@@ -82,7 +82,7 @@ This script gives the corresponding value of optimal probe radius in **Ångströ
 
 Use this value on the Spaceball [website](http://info.ifpan.edu.pl/~chwastyk/spaceball/)
 
-### 2. Input parameter Description
+### 2. Input parameter description
 
 The input parameters for the SPACEBALL calculation. Each line corresponds to a key parameter:
 
@@ -108,13 +108,13 @@ The input parameters for the SPACEBALL calculation. Each line corresponds to a k
 
 ---
 
-### 4. density calculation
+### 4. Density calculation
 
 From the volume obtained from the given platform, we can compute the density of the protein nanodroplet
 
 ---
 
-### 5. Example Workflow
+### 5. Example workflow
 
 ```bash
 # Generate probe radius
@@ -137,7 +137,7 @@ python spaceball.py droplet.pdb --chain_size 140 --surface_fractions 0.5
 | Name                  | Role / Contribution                  |
 |-----------------------|---------------------------------------|
 | Midhun Mohan Anila    | Python Scripts and Algorithm Design   |
-| Bartosz Rozycki       | Algorithm Design, corrections and validation |
+| Bartosz Rozycki       | Algorithm design, corrections and validation |
 | Michał Wojciechowski  | corrections and validation             |
 | Mateusz Chwastyk      | Developed the SPACEBALL method and website |
 
