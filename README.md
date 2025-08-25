@@ -136,7 +136,7 @@ python probe.py droplet.pdb --chain_size 140 --surface_fractions 0.5
 
 | Name                  | Role / Contribution                  |
 |-----------------------|---------------------------------------|
-| Midhun Mohan Anila    | Python Scripts and Algorithm design   |
+| Midhun Mohan Anila    | Python scripts and algorithm design   |
 | Bartosz Rozycki       | Algorithm design, corrections and validation |
 | Michał Wojciechowski  | corrections and validation             |
 | Mateusz Chwastyk      | Algorithm design, corrections and validation, developed the SPACEBALL method and website |
