@@ -89,7 +89,7 @@ The input parameters for the SPACEBALL calculation. Each line corresponds to a k
 - **`pdb_structure: <pdb_file>`**  
   The input structure file in PDB format contains the 3D coordinates of all atoms in the system.
 
-- **`wall_probe_radius_[A]: proberadius `**  
+- **`wall_probe_radius_[A]: probe radius `**  
   Radius of the wall probe in **Ångströms**. Defines the outer boundary for SPACEBALL calculations.
 
 - **`grid_X_[A]: 3`**  
@@ -137,9 +137,9 @@ python probe.py droplet.pdb --chain_size 140 --surface_fractions 0.5
 | Name                  | Role / Contribution                  |
 |-----------------------|---------------------------------------|
 | Midhun Mohan Anila    | Python scripts and algorithm design   |
-| Bartosz Rozycki       | Algorithm design, corrections and validation |
+| Bartosz Rozycki       | algorithm design, corrections and validation |
 | Michał Wojciechowski  | corrections and validation             |
-| Mateusz Chwastyk      | Algorithm design, corrections and validation, developed the SPACEBALL method and website |
+| Mateusz Chwastyk      | developer of the SPACEBALL method and website, algorithm design, corrections and validation|
 
 ## Publication (Under Review)
 
