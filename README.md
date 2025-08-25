@@ -140,6 +140,7 @@ python probe.py droplet.pdb --chain_size 140 --surface_fractions 0.5
 | Bartosz Rozycki       | algorithm design, corrections and validation |
 | Michał Wojciechowski  | corrections and validation             |
 | Mateusz Chwastyk      | developer of the SPACEBALL method and website, algorithm design, corrections and validation|
+| Jan Malinowski        | developer of the SPACEBALL website |
 
 ## Publication (Under Review)
 
