@@ -13,7 +13,7 @@ Here is a computational tool designed for the density calculation of protein nan
 
 ```bash
 ---
-SPACEBALL-v3.0/
+SPACEBALL_DENSITY/
 ├── LICENSE                 # License file (MIT)
 ├── README.md               # Documentation and usage guide
 │
