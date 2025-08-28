@@ -48,7 +48,7 @@ def calculate_distance(point1, point2):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="SPACEBALL v3.0 – Surface chain analysis")
+    parser = argparse.ArgumentParser(description="SPACEBALL_DENSITY – Surface chain analysis")
     parser.add_argument("pdb_file", help="Path to input PDB file")
     parser.add_argument("--chain_size", type=int, required=True, help="Number of atoms per chain")
     parser.add_argument("--surface_fractions", type=float, nargs="+", default=[0.5],
