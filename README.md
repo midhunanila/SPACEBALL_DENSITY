@@ -66,7 +66,7 @@ The Python scripts in this repository calculate the optimal probe radius for a p
 1. Navigate to the `scripts` folder:
 
 ```bash
-cd ../scripts
+cd scripts
 ```
 
 2. Run the script:
@@ -134,13 +134,13 @@ python probe.py droplet.pdb --chain_size 140 --surface_fractions 0.5
 
 ## Developers
 
-| Name                   | Role / Contribution                  |
-|------------------------|---------------------------------------|
-| Midhun Mohan Anila     | Python scripts and algorithm design   |
-| Bartosz Rozycki        | algorithm design, corrections and validation |
-| Michał Wojciechowski   | corrections and validation             |
-| Mateusz Chwastyk       | developer of the SPACEBALL method and website, algorithm design, corrections and validation|
-| Jan Malinowski         | developer of the SPACEBALL website |
+| Name                     | Role / Contribution                  |
+|--------------------------|---------------------------------------|
+| Midhun Mohan Anila       | Python scripts and algorithm design   |
+| Bartosz Rozycki          | algorithm design, corrections and validation |
+| Michał Wojciechowski     | corrections and validation   |
+| Mateusz Chwastyk         | developer of the SPACEBALL method and website, algorithm design, corrections and validation|
+| Jan Malinowski           | developer of the SPACEBALL website |
 
 ## Publication (Under Review)
 
