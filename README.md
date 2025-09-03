@@ -144,10 +144,10 @@ python probe.py droplet.pdb --chain_size 140 --surface_fractions 0.5
 
 ## Publication (Under Review)
 
-Our methodology and the SPACEBALL tool are described in a recent manuscript currently **under review**:
+Our methodology and the SPACEBALL tool are described in a recent manuscript currently **Accepted**:
 
 - **Title:** Theoretical Methods for Assessing the Density of Protein Nanodroplets 
 - **Authors:** Midhun Mohan Anila, Michał Wojciechowski, Mateusz Chwastyk, Bartosz Rozycki  
-- **Status:** Under Review  
+- **Status:** Accepted 
 
 
