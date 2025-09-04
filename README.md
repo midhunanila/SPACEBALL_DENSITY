@@ -142,12 +142,16 @@ python probe.py droplet.pdb --chain_size 140 --surface_fractions 0.5
 | Mateusz Chwastyk         | developer of the SPACEBALL method and website, algorithm design, corrections and validation|
 | Jan Malinowski           | developer of the SPACEBALL website |
 
-## Publication (Under Review)
 
-Our methodology and the SPACEBALL tool are described in a recent manuscript currently **Accepted**:
+## Publication
 
-- **Title:** Theoretical Methods for Assessing the Density of Protein Nanodroplets 
-- **Authors:** Midhun Mohan Anila, Michał Wojciechowski, Mateusz Chwastyk, Bartosz Rozycki  
-- **Status:** Accepted 
+Our methodology and the SPACEBALL tool are described in the following article:  
+
+- **Title:** Accurate Determination of Protein Nanodroplet Densities from Molecular Dynamics Simulations  
+- **Authors:** Midhun Mohan Anila, Michał Wojciechowski, Mateusz Chwastyk, Bartosz Różycki  
+- **Journal:** *International Journal of Molecular Sciences* (2025)  
+- **DOI / Link:** [https://www.mdpi.com/1422-0067/26/17/8631](https://www.mdpi.com/1422-0067/26/17/8631)  
+- **Status:** Published ✅  
+
 
 
