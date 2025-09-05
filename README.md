@@ -147,7 +147,7 @@ python probe.py droplet.pdb --chain_size 140 --surface_fractions 0.5
 
 Our methodology and the SPACEBALL tool are described in the following article:  
 
-- **Title:** Accurate Determination of Protein Nanodroplet Densities from Molecular Dynamics Simulations  
+- **Title:** Theoretical Methods for Assessing the Density of Protein Nanodroplets
 - **Authors:** Midhun Mohan Anila, Michał Wojciechowski, Mateusz Chwastyk, Bartosz Różycki  
 - **Journal:** *International Journal of Molecular Sciences* (2025)  
 - **DOI / Link:** [https://www.mdpi.com/1422-0067/26/17/8631](https://www.mdpi.com/1422-0067/26/17/8631)  
